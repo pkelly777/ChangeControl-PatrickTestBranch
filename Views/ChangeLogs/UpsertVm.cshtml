@@ -1,0 +1,273 @@
+﻿@model ChangeControlApp.Models.ViewModels.ChangeImpactVM
+
+
+<style type="text/css">
+    input::-webkit-calendar-picker-indicator {
+        opacity: 100;
+    }
+</style>
+
+<br />
+<div class="row">
+    <div class="col-2">
+        <h2 class="text-info">@(Model.ChangeLog.Id != 0 ? "Edit" : "Create")</h2>
+    </div>
+    <div class="col-10" style="text-align:center">Change Control Record Test Patrick Branch
+    </div>
+    </div>
+    <div class="container border" style="padding:30px;">
+        <form method="post">
+            <div class="card col-12  border-0">
+                <div class="card-body">
+                    <div class="row">
+
+                        <div class="col-6">
+                            <h5 class="card-title">Change Request No.</h5>
+                        </div>
+
+                    </div>
+
+                    <hr />
+                    @if (Model.ChangeLog.Id != 0)
+                    {
+                        <input type="hidden" asp-for="ChangeLog.Id" />
+
+                    }
+                    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="ChangeLog.Description"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="ChangeLog.Description" class="form-control" />
+                            <span asp-validation-for="ChangeLog.Description" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="ChangeLog.Reason"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="ChangeLog.Reason" class="form-control" />
+                            <span asp-validation-for="ChangeLog.Reason" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="ChangeLog.AffectedProductsAndProcesses"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="ChangeLog.AffectedProductsAndProcesses" class="form-control" />
+                            <span asp-validation-for="ChangeLog.AffectedProductsAndProcesses" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card col-12  border-0">
+                <div class="card-body">
+                    <div class="row">
+
+                        <div class="col-6">
+                            <h5 class="card-title">Impacts</h5>
+                        </div>
+
+                    </div>
+
+                    <hr />
+                    @if (Model.Impact.Id != 0)
+                    {
+                        <input type="hidden" asp-for="Impact.Id" />
+
+                    }
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="Impact.Name"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Impact.Name" class="form-control" />
+                            <span asp-validation-for="Impact.Name" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="Impact.QmsProceduresProcesses "></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Impact.QmsProceduresProcesses" class="form-control" />
+                            <span asp-validation-for="Impact.QmsProceduresProcesses" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="Impact.OtherDocumentation"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Impact.OtherDocumentation" class="form-control" />
+                            <span asp-validation-for="Impact.OtherDocumentation" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="Impact.FinishedProduct"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Impact.FinishedProduct" class="form-control" />
+                            <span asp-validation-for="Impact.FinishedProduct" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="Impact.ExistMaterialStockFinishProd"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Impact.ExistMaterialStockFinishProd" class="form-control" />
+                            <span asp-validation-for="Impact.ExistMaterialStockFinishProd" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="Impact.ProdCustSpec "></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Impact.ProdCustSpec " class="form-control" />
+                            <span asp-validation-for="Impact.ProdCustSpec " class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="Impact.MaterialQualification"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Impact.MaterialQualification" class="form-control" />
+                            <span asp-validation-for="Impact.MaterialQualification" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="Impact.ProductValidation"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Impact.ProductValidation" class="form-control" />
+                            <span asp-validation-for="Impact.ProductValidation" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="Impact.ProcessValidation"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Impact.ProcessValidation" class="form-control" />
+                            <span asp-validation-for="Impact.ProcessValidation" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="Impact.TestEquipMethodsCalib"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Impact.TestEquipMethodsCalib" class="form-control" />
+                            <span asp-validation-for="Impact.TestEquipMethodsCalib" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="Impact.RegulatoryReq"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Impact.RegulatoryReq" class="form-control" />
+                            <span asp-validation-for="Impact.RegulatoryReq" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="Impact.SupplierAgreementsSpec"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Impact.SupplierAgreementsSpec" class="form-control" />
+                            <span asp-validation-for="Impact.SupplierAgreementsSpec" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="Impact.CustomerReqSpec"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Impact.CustomerReqSpec" class="form-control" />
+                            <span asp-validation-for="Impact.CustomerReqSpec" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="Impact.NewExistEquipSoftware"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Impact.NewExistEquipSoftware" class="form-control" />
+                            <span asp-validation-for="Impact.NewExistEquipSoftware" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="Impact.Cleaning"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Impact.Cleaning" class="form-control" />
+                            <span asp-validation-for="Impact.Cleaning" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="Impact.Maintenance"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Impact.Maintenance" class="form-control" />
+                            <span asp-validation-for="Impact.Maintenance" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="Impact.Environment"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Impact.Environment" class="form-control" />
+                            <span asp-validation-for="Impact.Environment" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="Impact.ManufWorkFlowAncillaryPkgEquip"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Impact.ManufWorkFlowAncillaryPkgEquip" class="form-control" />
+                            <span asp-validation-for="Impact.ManufWorkFlowAncillaryPkgEquip" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="Impact.Other"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="Impact.Other" class="form-control" />
+                            <span asp-validation-for="Impact.Other" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-3 offset-3">
+                            <button type="submit" class="btn btn-primary form-control">
+                                @(Model.ChangeLog.Id != 0 ? "Update" : "Create")
+                            </button>
+                        </div>
+                        <div class="col-3">
+                            <a asp-action="Index" class="btn btn-success form-control">Back to List</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+    @section Scripts{
+        <partial name="_ValidationScriptsPartial" />
+    }

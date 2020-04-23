@@ -1,0 +1,124 @@
+﻿@model ChangeControlApp.Models.Impact
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Impact</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QmsProceduresProcesses" class="control-label"></label>
+                <input asp-for="QmsProceduresProcesses" class="form-control" />
+                <span asp-validation-for="QmsProceduresProcesses" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OtherDocumentation" class="control-label"></label>
+                <input asp-for="OtherDocumentation" class="form-control" />
+                <span asp-validation-for="OtherDocumentation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FinishedProduct" class="control-label"></label>
+                <input asp-for="FinishedProduct" class="form-control" />
+                <span asp-validation-for="FinishedProduct" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExistMaterialStockFinishProd" class="control-label"></label>
+                <input asp-for="ExistMaterialStockFinishProd" class="form-control" />
+                <span asp-validation-for="ExistMaterialStockFinishProd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProdCustSpec" class="control-label"></label>
+                <input asp-for="ProdCustSpec" class="form-control" />
+                <span asp-validation-for="ProdCustSpec" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaterialQualification" class="control-label"></label>
+                <input asp-for="MaterialQualification" class="form-control" />
+                <span asp-validation-for="MaterialQualification" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductValidation" class="control-label"></label>
+                <input asp-for="ProductValidation" class="form-control" />
+                <span asp-validation-for="ProductValidation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProcessValidation" class="control-label"></label>
+                <input asp-for="ProcessValidation" class="form-control" />
+                <span asp-validation-for="ProcessValidation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TestEquipMethodsCalib" class="control-label"></label>
+                <input asp-for="TestEquipMethodsCalib" class="form-control" />
+                <span asp-validation-for="TestEquipMethodsCalib" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RegulatoryReq" class="control-label"></label>
+                <input asp-for="RegulatoryReq" class="form-control" />
+                <span asp-validation-for="RegulatoryReq" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupplierAgreementsSpec" class="control-label"></label>
+                <input asp-for="SupplierAgreementsSpec" class="form-control" />
+                <span asp-validation-for="SupplierAgreementsSpec" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerReqSpec" class="control-label"></label>
+                <input asp-for="CustomerReqSpec" class="form-control" />
+                <span asp-validation-for="CustomerReqSpec" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NewExistEquipSoftware" class="control-label"></label>
+                <input asp-for="NewExistEquipSoftware" class="form-control" />
+                <span asp-validation-for="NewExistEquipSoftware" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cleaning" class="control-label"></label>
+                <input asp-for="Cleaning" class="form-control" />
+                <span asp-validation-for="Cleaning" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Maintenance" class="control-label"></label>
+                <input asp-for="Maintenance" class="form-control" />
+                <span asp-validation-for="Maintenance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Environment" class="control-label"></label>
+                <input asp-for="Environment" class="form-control" />
+                <span asp-validation-for="Environment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ManufWorkFlowAncillaryPkgEquip" class="control-label"></label>
+                <input asp-for="ManufWorkFlowAncillaryPkgEquip" class="form-control" />
+                <span asp-validation-for="ManufWorkFlowAncillaryPkgEquip" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Other" class="control-label"></label>
+                <input asp-for="Other" class="form-control" />
+                <span asp-validation-for="Other" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ChangeLogId" class="control-label"></label>
+                <select asp-for="ChangeLogId" class ="form-control" asp-items="ViewBag.ChangeLogId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

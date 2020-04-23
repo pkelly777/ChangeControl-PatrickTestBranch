@@ -1,0 +1,149 @@
+﻿@model IEnumerable<ChangeControlApp.Models.Impact>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QmsProceduresProcesses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OtherDocumentation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FinishedProduct)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExistMaterialStockFinishProd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdCustSpec)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaterialQualification)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductValidation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProcessValidation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TestEquipMethodsCalib)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegulatoryReq)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupplierAgreementsSpec)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerReqSpec)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewExistEquipSoftware)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cleaning)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Maintenance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Environment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ManufWorkFlowAncillaryPkgEquip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Other)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChangeLog)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QmsProceduresProcesses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OtherDocumentation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinishedProduct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExistMaterialStockFinishProd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdCustSpec)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaterialQualification)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductValidation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProcessValidation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestEquipMethodsCalib)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegulatoryReq)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupplierAgreementsSpec)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerReqSpec)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewExistEquipSoftware)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cleaning)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Maintenance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Environment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManufWorkFlowAncillaryPkgEquip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Other)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChangeLog.Description)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
